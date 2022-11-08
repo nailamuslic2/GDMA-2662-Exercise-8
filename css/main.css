@@ -338,7 +338,11 @@ h2 {
 }
 
 #home > div:last-child {
-  margin-top: 10em;
+    padding: 1px 0;
+}
+
+#home h1 {
+  margin: 5em 0 1em;
 }
 
 #home p:last-child:before,
@@ -394,8 +398,6 @@ h2 {
     width: 100%;
 }
 
-
-
 @media only screen and (min-width: 768px) {
     #home img {
         width: 7.20rem;
@@ -408,6 +410,10 @@ h2 {
     #home nav {
         text-align: right;
     }
+
+    #home h1 {
+        margin: 4em 0 1em;
+      }
 }
 
 @media only screen and (min-width: 1024px) {

@@ -9,11 +9,15 @@
         - Typography
 5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks (classes and IDs)
         - Framework
+        - SM Dispaly
+        - MD Display
+        - LG Display
 6.0 - Components: specific designed components (modular widgets that visually look the same but have one difference)
-
+        - Home
+        - Features
+        - Footer
 7.0 - Utilities
         - Alignment
-        - Screen reader
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -43,6 +47,12 @@ html {
      }
 }
 
+@media only screen and (min-width: 1024px) {
+    html {
+        font-size: 1.3rem;
+     }
+}
+
 /*--------------------------------------------------------------
     4.0 - ELEMENTS
 -------------------------------------------------------------- */
@@ -52,7 +62,44 @@ html {
 h1 {
     font-size: 2.82rem;
     margin: 2.5em 0 .25em;
+    font-weight: 500;
 }
+
+h1,
+#home p,
+nav a {
+    color: #fff;
+}
+
+#home nav li {
+    display: inline-block;
+}
+
+nav a {
+    margin: .3rem;
+}
+
+#home span {
+    color: #1EA78D;
+}
+
+h3 {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #1E1E1E;
+}
+
+p {
+    color: #717982;
+    font-size: 0.875rem;
+}
+
+#work p {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
 
 @media only screen and (min-width: 768px) {
     h1 {
@@ -79,20 +126,19 @@ h1 {
     flex-flow: wrap;
 }
 
-[class*='col-'] {
-    padding: 10px;
-}
-
 .img-responsive {
     max-width: 100%;
 }
-
 
 /* ----- SM DISPLAY ----- */
 
 .wrapper {
     width: 95%;
     margin: 0 auto;
+}
+
+[class*="col-"] {
+    padding: .5rem;
 }
 
 .col-sm-1 {
@@ -263,60 +309,162 @@ h1 {
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 
-/*#bg-hand {
-    background: url(../img/hand.jpg) no-repeat center;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-clip: content-box;
-}*/
+#contact a,
+nav a {
+    text-decoration: none;
+}
 
-/* ----- HEADER ----- */
+nav a:hover,
+#contact a:hover {
+    text-decoration: underline;
+}
 
+#features > .wrapper > header:first-child,
+#work,
 #home {
     text-align: center;
 }
 
-#home p:last-child {
+#home p:last-child,
+h2 {
     display: inline-block;
-    position: relative;
-    top: 0;
-    left: 0;
+}
+
+
+/* ----- HOME ----- */
+
+#home p:first-of-type {
+    font-size: 1.5rem;
+}
+
+#home > div:last-child {
+  margin-top: 10em;
 }
 
 #home p:last-child:before,
 #home p:last-child:after {
     content: '';
-    width: 20px;
-    height: 5px;
-    background-color: green;
+    width: 1.25rem;
+    height: .1em;
+    background-color: #1EA78D;
     display: block;
     position: absolute;
-    top: 5px;
+    top: .5rem;
+}
+
+#home p:last-child {
+    font-size: 1.12rem;
+    margin-bottom: 0;
+    padding-bottom: 5em;
+    top: 0;
+    left: 0;
+    position: relative;
 }
 
 #home p:last-child:before {
-    left: -30px;
+    left: -2rem;
 }
 
 #home p:last-child:after {
-    right: -30px;
+    right: -2rem;
 }
 
-header > div:first-child {
+#home > div:first-child {
     background-color: #10443F;
 }
 
 #home img {
-    width: 100px;
+    width: 6.25rem;
+}
+
+#home {
+    background-color: #104F41;
+}
+
+#home .col-sm-4, 
+#home nav {
+    margin: 0 auto;
+    padding: 1em 0 1em;
+}
+
+#home > div:first-child {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    #home img {
+        width: 7.20rem;
+    }
+
+    #home .col-sm-4 {
+        text-align: left;
+    }
+
+    #home nav {
+        text-align: right;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
     #home img {
-        width: 129px;
+        width: 8.06rem;
     }
+
+    #home .col-sm-4 {
+        text-align: left;
+    }
+
+    #home nav {
+        text-align: right;
+    }
+}
+
+/* --- FEATURES --- */
+
+#features {
+    background-color: #F4F7F9;
+}
+
+h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1EA78D;
+    font-size: 1.25rem;
+    border-bottom: #717982 .15em solid;
+    padding: 1.25rem;
+}
+
+/* --- FOOTER --- */
+
+#contact {
+    background-color: #1EA78D;
+    border-top: #10443F .3em solid;
+    font-size: 1.14rem;
+}
+
+#contact p {
+    color: #fff;
+}
+
+#contact img {
+    width: 8.06rem;
+    padding: 2rem 0 1rem;
+}
+
+#contact a {
+    color: #fff;
+    font-style: normal;
+    margin-right: .5rem;
+}
+
+#contact span {
+    vertical-align: .1em;
+    font-size: 2rem;
 }
 
 /*--------------------------------------------------------------
@@ -327,17 +475,4 @@ header > div:first-child {
 
 .col-center {
     justify-content: center;
-}
-
-/* ----- SCREEN READER ----- */
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
 }

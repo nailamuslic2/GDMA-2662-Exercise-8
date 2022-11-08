@@ -12,16 +12,16 @@
 
 
 <title></title>
-</head>  <!--REMS FOR FONT SIZE AND EMS FOR VERTICAL SPACING-->
+</head>  
 
 <body>
-    <header id="home"> <!--This id is also for the light green hero area-->
-        <div> <!--This div is for just the dark green nav-->
+    <header id="home"> 
+        <div> 
             <div class="wrapper row">
-                <div class="col-sm-4 col-lg-6">
+                <div class="col-sm-4 col-md-6">
                     <img src="img/logo-brandi.png" alt="Brandi" class="img-responsive">
                 </div>
-                <nav class="col-sm-12 col-lg-6">
+                <nav class="col-sm-12 col-md-6">
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#features">Features</a></li>
@@ -31,51 +31,51 @@
                 </nav>
             </div>
         </div>
-        <div class="wrapper"> <!--Text align: center-->
+        <div class="wrapper"> 
             <h1>Meet <b>Responsive</b>!</h1>
-            <p><span>/fancy</span> ways to resize content</p> <!--encode the forward slash-->
-            <p>Welcome to the Future</p>
+            <p><span>&#47;fancy</span> ways to resize content</p> 
+            <p>Welcome to the future</p>
         </div>
     </header>
 
     <main>
         <section id="features">
             <div class="wrapper">
-                <header> <!--Text align: center-->
-                    <h2>features</h2> <!--add border-bottom and padding. Also will need to change it to inline-block.-->
+                <header class="col-sm-12"> 
+                    <h2>features</h2> 
                 </header>
                 <div class="row">
                     <section class="col-sm-12 col-lg-4">
                         <header>
                             <h3>Fluid Layout</h3>
                         </header>
-                        <p>In a fluid layout, the page area and its grid resize proportionally to fill the available width of the screen or window. That is easily accomplished with percentages! You can also rely on flex, without a width, or in the future CSS Grid when it's more widely supported. </p>
+                        <p>In a fluid layout, the page area and its grid resize proportionally to fill the available width of the screen or window. That is easily accomplished with <b>percentages</b>! You can also rely on flex, without a width, or in the future CSS Grid when it's more widely supported. </p>
                     </section>
 
-                    <section class="col-sm-12 col-lg-4">
+                    <section class="col-sm-12 col-md-6 col-lg-4">
                         <header>
                             <h3>Flexible Images</h3>
                         </header>
-                        <p>Every now and then a solutio is simple. Take, for example, the styles required to make images scal to fit the size of their container: max-width: 100%. That's it! </p>
+                        <p>Every now and then a solutio is simple. Take, for example, the styles required to make images scal to fit the size of their container: <b>max-width: 100%</b>. That's it! </p>
                     </section>
 
-                    <section class="col-sm-12 col-lg-4">
+                    <section class="col-sm-12 col-md-6 col-lg-4">
                         <header>
                             <h3>Media Queries</h3>
                         </header>
-                        <p>Media queries apply different styles based on characteristics of the browser: its width, whether it is vertically or horizontally oriented, its resolution, and more. They are what make it possible to send a one-column layout to small screens and a multicolumn layout to larger screens on the fly.</p>
+                        <p>Media queries apply <b>different styles based on characteristics of the browser</b>: its width, whether it is vertically or horizontally oriented, its resolution, and more. They are what make it possible to send a one-column layout to small screens and a multicolumn layout to larger screens on the fly.</p>
                     </section>
                 </div>
             </div>
         </section>
 
-        <section id="work"> <!--Text align: center-->
+        <section id="work">
             <div class="wrapper">
                 <header>
                     <h2>works</h2>
                 </header>
                 <div class="row col-center"> 
-                    <div class="col-sm-12 col-lg-8">
+                    <div class="col-sm-12 col-md-10 col-lg-8">
                         <p>A breakpoint is the point at which we use a media query to introduce a style change. We tend to base our breakpoints on the common device sizes.</p>
                     </div>
                 </div>
@@ -83,13 +83,13 @@
         </section>
     </main>
 
-    <footer id="contact"> <!--bg color and border top-->
+    <footer id="contact"> 
         <div class="wrapper row">
-            <div class="col-sm-12 col-lg-3">
-                <img src="" alt="">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <img src="img/logo-brandi.png" alt="Brandi">
                 <p>Mobile-first is when we start by writing our CSS for mobile devices and then use media queries to add in styling for larger screen sizes. When we style for desktop, we're adding widths, columns, and moving things around. We're adding complexity. Mobile layouts tend to be very simple, making it very easy to start there.</p>
                 <address>
-                    <p><a href="mailto:hello@email.com">hello@email.com</a><span>.</span><a href="tel:+18001234567">800.123.4567</a></p>
+                    <p><a href="mailto:hello@email.com">hello@email.com</a><span><a>.</a></span><a href="tel:+18001234567">800.123.4567</a></p>
                 </address>
             </div>
         </div>

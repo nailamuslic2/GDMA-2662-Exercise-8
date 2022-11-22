@@ -13,6 +13,7 @@
         - MD Display
         - LG Display
 6.0 - Components: specific designed components, ID selectors (modular widgets that visually look the same but have one difference)
+        - Nav
         - Home
         - Features
         - Work
@@ -40,7 +41,7 @@
 
 html {
     font-size: .875rem;
-    line-height: 1.75rem;
+    line-height: 1.75em;
     color: #717982;
 }
 
@@ -52,29 +53,9 @@ html {
 
 h1 {
     font-size: 3.42rem;
-    margin: 6em 0 .25em;
+    margin: 5.5em 0 .1em;
     font-weight: 500;
-}
-
-h1,
-nav a {
     color: #fff;
-}
-
-li {
-    display: inline-block;
-}
-
-nav ul {
-    padding: 0 0 2em;
-    margin: 0 auto;
-    line-height: 0;
-}
-
-nav a {
-    font-size: 1rem;
-    padding: .5rem;
-    text-decoration: none;
 }
 
 h2 {
@@ -82,17 +63,17 @@ h2 {
     font-weight: 700;
     text-transform: uppercase;
     color: #1EA78D;
-    font-size: 1.42rem;
+    font-size: 1.65rem;
     border-bottom: #717982 .12em solid;
-    padding: 4rem 2rem 1.25rem;
+    padding: 2em 2rem .8em;
 }
 
 h3 {
   font-size: 1.28rem;
-  line-height: 1.61rem;
+  line-height: 1em;
   font-weight: 700;
   color: #1E1E1E;
-  margin-bottom: 0;
+  margin-bottom: 0em;
 }
 
 
@@ -102,42 +83,26 @@ h3 {
         font-size: 3.5rem;
         margin: 4em 0 1em;
     }
-
-    nav ul {
-        padding: 0;
-        line-height: 0;
-        margin-top: 2em;
-    }
 }
 
 @media only screen and (min-width: 1024px) {
 
     h1 {
         font-size: 5.14rem;
-        line-height: 6.46rem;
-        margin: 4em 0 0em;
-    }
-
-    nav a {
-        font-size: 1rem;
-        margin: .7rem;
-    }
-
-    nav a:hover {
-        text-decoration: underline;
-        text-underline-offset: 30%;
+        line-height: 1.8em;
+        margin: 3em 0 0em;
     }
 
     h2 {
         font-size: 2.28rem;
-        padding: 4rem 3rem 2rem;
+        padding: 2em 3rem 1em;
         border-bottom: #717982 .05em solid;
         font-weight: 700;
     }
 
     h3 {
         font-size: 1.52rem;
-        line-height: 1.91rem;
+        line-height: 1.91em;
         margin: 1em 0 0;
       }
 
@@ -352,7 +317,7 @@ h3 {
     text-align: center;
 }
 
-#contact p,
+#contact,
 #contact a,
 #home p {
     color: #fff;
@@ -370,13 +335,57 @@ h3 {
     left: 0;
 }
 
+
+/* ----- NAV ----- */
+
+li {
+    display: inline-block;
+}
+
+nav ul {
+    padding: 0 0 1em;
+    margin-top: 0;
+    line-height: 0;
+}
+
+nav a {
+    font-size: 1rem;
+    padding: .5rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    nav ul {
+        padding: 0;
+        line-height: 0;
+        margin-top: 2em;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    nav a {
+        font-size: 1rem;
+        margin: .7rem;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+        text-underline-offset: 30%;
+    }
+
+}
+
 /* ----- HOME ----- */
 
 #home p:last-child {
     display: inline-block;
     font-size: 1.28rem;
     font-weight: 400;
-    line-height: 1.61rem;
+    line-height: 0em;
     margin-bottom: 0;
     padding-bottom: 5em;
     position: relative;
@@ -385,7 +394,7 @@ h3 {
 #home p:first-of-type {
     font-size: 1.71rem;
     font-weight: 300;
-    line-height: 2.15rem;
+    line-height: 2em;
     margin: 0;
 }
 
@@ -394,7 +403,7 @@ h3 {
 }
 
 #home > div:last-child {
-    padding: 1px 0;
+    padding: 1em 0;
 }
 
 #home p:last-child:before,
@@ -404,7 +413,7 @@ h3 {
     height: .15em;
     display: block;
     position: absolute;
-    top: .5rem;
+    top: .1em;
 }
 
 #home p:last-child:before {
@@ -433,8 +442,7 @@ h3 {
 }
 
 #home .col-sm-4 {
-    margin: 0 auto;
-    padding: 1em 0 1em;
+    padding: 1em 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -453,22 +461,26 @@ h3 {
     
     #home p:first-of-type {
         font-size: 3.43rem;
-        line-height: 3rem;
+        line-height: 0em;
         font-weight: 300;
         margin: 0em;
     }
 
     #home p:last-child {
         font-size: 1.43rem;
-        line-height: 1.79rem;
-        margin: 1.5em 0em 0em;
-        padding-bottom: 6em;
+        line-height: 2rem;
+        padding: 1.5em 0 6em;
         letter-spacing: .05rem;
     }
 
     #home img {
         width: 9.21rem;
     }
+
+    #home p:last-child:before,
+    #home p:last-child:after {
+        top: 2.2em;
+}
 
 }
 
@@ -530,6 +542,11 @@ h3 {
 
 /* --- FOOTER --- */
 
+#contact {
+    background-color: #1EA78D;
+    border-top: #10443F .3em solid;
+}
+
 #contact a {
     text-decoration: none;
     font-style: normal;
@@ -537,19 +554,19 @@ h3 {
     font-weight: 600;
 }
 
-#contact {
-    background-color: #1EA78D;
-    border-top: #10443F .3em solid;
-}
-
 #contact span {
     vertical-align: .1em;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 #contact img {
     width: 9.2rem;
     margin-top: 4em;
+}
+
+address p {
+    margin-top: 0em;
+    line-height: 1em;
 }
 
 address {
@@ -558,20 +575,23 @@ address {
 
 @media only screen and (min-width: 1024px) {
 
-    #contact img { 
-        padding-top: 5em;
-        width: 9.21rem;
+    #contact {
+        padding: 2em 0;
     }
-
-    #contact a:hover {
-        text-decoration: underline;
-        text-underline-offset: 30%;
+    
+    #contact img { 
+        width: 9.21rem;
     }
 
     #contact a {
         font-size: 1rem;
         font-weight: 600;
         line-height: 1rem;
+    }
+
+    #contact a:hover {
+        text-decoration: underline;
+        text-underline-offset: 30%;
     }
 
     address {

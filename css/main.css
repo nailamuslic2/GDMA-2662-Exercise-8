@@ -12,7 +12,7 @@
         - SM Dispaly
         - MD Display
         - LG Display
-6.0 - Components: specific designed components (modular widgets that visually look the same but have one difference)
+6.0 - Components: specific designed components, ID selectors (modular widgets that visually look the same but have one difference)
         - Home
         - Features
         - Footer
@@ -66,21 +66,27 @@ h1 {
 }
 
 h1,
-#home p,
 nav a {
     color: #fff;
 }
 
-#home nav li {
+li {
     display: inline-block;
 }
 
 nav a {
     margin: .3rem;
+    text-decoration: none;
 }
 
-#home span {
+h2 {
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
     color: #1EA78D;
+    font-size: 1.25rem;
+    border-bottom: #717982 .15em solid;
+    padding: 1.25rem;
 }
 
 h3 {
@@ -94,12 +100,9 @@ p {
     font-size: 0.875rem;
 }
 
-#work p {
-    font-size: 1rem;
-    font-weight: 700;
+nav a:hover {
+    text-decoration: underline;
 }
-
-
 
 @media only screen and (min-width: 768px) {
     h1 {
@@ -110,6 +113,13 @@ p {
 @media only screen and (min-width: 1024px) {
     h1 {
         font-size: 4.23rem;
+        margin-top: 0em;
+        margin-bottom: 0em;
+    }
+
+    nav a {
+        font-size: .7rem;
+        margin: .5rem;
     }
 }
 
@@ -309,40 +319,50 @@ p {
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 
-#contact a,
-nav a {
-    text-decoration: none;
-}
-
-nav a:hover,
-#contact a:hover {
-    text-decoration: underline;
-}
-
-#features > .wrapper > header:first-child,
+#features .wrapper > header:first-child,
 #work,
 #home {
     text-align: center;
 }
 
-#home p:last-child,
-h2 {
-    display: inline-block;
+#contact p,
+#contact a,
+#home p {
+    color: #fff;
 }
 
+#home p:last-child:before,
+#home p:last-child:after,
+#contact {
+    background-color: #1EA78D;
+}
+
+#home p:last-child,
+#home > div:first-child {
+    top: 0;
+    left: 0;
+}
 
 /* ----- HOME ----- */
+
+#home p:last-child {
+    display: inline-block;
+    font-size: 1.12rem;
+    margin-bottom: 0;
+    padding-bottom: 5em;
+    position: relative;
+}
 
 #home p:first-of-type {
     font-size: 1.5rem;
 }
 
-#home > div:last-child {
-    padding: 1px 0;
+#home span {
+    color: #1EA78D;
 }
 
-#home h1 {
-  margin: 5em 0 1em;
+#home > div:last-child {
+    padding: 1px 0;
 }
 
 #home p:last-child:before,
@@ -350,19 +370,9 @@ h2 {
     content: '';
     width: 1.25rem;
     height: .1em;
-    background-color: #1EA78D;
     display: block;
     position: absolute;
     top: .5rem;
-}
-
-#home p:last-child {
-    font-size: 1.12rem;
-    margin-bottom: 0;
-    padding-bottom: 5em;
-    top: 0;
-    left: 0;
-    position: relative;
 }
 
 #home p:last-child:before {
@@ -375,6 +385,8 @@ h2 {
 
 #home > div:first-child {
     background-color: #10443F;
+    position: fixed;
+    width: 100%;
 }
 
 #home img {
@@ -389,13 +401,6 @@ h2 {
 #home nav {
     margin: 0 auto;
     padding: 1em 0 1em;
-}
-
-#home > div:first-child {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -417,17 +422,8 @@ h2 {
 }
 
 @media only screen and (min-width: 1024px) {
-    #home img {
-        width: 8.06rem;
-    }
+    
 
-    #home .col-sm-4 {
-        text-align: left;
-    }
-
-    #home nav {
-        text-align: right;
-    }
 }
 
 /* --- FEATURES --- */
@@ -436,16 +432,24 @@ h2 {
     background-color: #F4F7F9;
 }
 
-h2 {
+/* --- WORK --- */
+
+#work p {
+    font-size: 1rem;
     font-weight: 700;
-    text-transform: uppercase;
-    color: #1EA78D;
-    font-size: 1.25rem;
-    border-bottom: #717982 .15em solid;
-    padding: 1.25rem;
 }
 
 /* --- FOOTER --- */
+
+#contact a {
+    text-decoration: none;
+    font-style: normal;
+    margin-right: .5rem;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
 
 #contact {
     background-color: #1EA78D;
@@ -453,19 +457,9 @@ h2 {
     font-size: 1.14rem;
 }
 
-#contact p {
-    color: #fff;
-}
-
 #contact img {
     width: 8.06rem;
     padding: 2rem 0 1rem;
-}
-
-#contact a {
-    color: #fff;
-    font-style: normal;
-    margin-right: .5rem;
 }
 
 #contact span {

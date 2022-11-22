@@ -38,19 +38,9 @@
 }
 
 html {
-    font-size: 1rem;
-}
-
-@media only screen and (min-width: 768px) {
-    html {
-        font-size: 1.1rem;
-     }
-}
-
-@media only screen and (min-width: 1024px) {
-    html {
-        font-size: 1.3rem;
-     }
+    font-size: .875rem;
+    line-height: 1.75rem;
+    color: #717982;
 }
 
 /*--------------------------------------------------------------
@@ -60,8 +50,8 @@ html {
 /* ----- TYPOGRAPHY ----- */
 
 h1 {
-    font-size: 2.82rem;
-    margin: 2.5em 0 .25em;
+    font-size: 3.42rem;
+    margin: 6em 0 .25em;
     font-weight: 500;
 }
 
@@ -74,8 +64,15 @@ li {
     display: inline-block;
 }
 
+nav ul {
+    padding: 0 0 2em;
+    margin: 0 auto;
+    line-height: 0;
+}
+
 nav a {
-    margin: .3rem;
+    font-size: 1rem;
+    padding: .5rem;
     text-decoration: none;
 }
 
@@ -84,42 +81,71 @@ h2 {
     font-weight: 700;
     text-transform: uppercase;
     color: #1EA78D;
-    font-size: 1.25rem;
-    border-bottom: #717982 .15em solid;
-    padding: 1.25rem;
+    font-size: 1.42rem;
+    border-bottom: #717982 .12em solid;
+    padding: 4rem 2rem 1.25rem;
 }
 
 h3 {
-  font-size: 1.12rem;
+  font-size: 1.28rem;
+  line-height: 1.61rem;
   font-weight: 700;
   color: #1E1E1E;
+  margin-bottom: 0;
 }
 
-p {
-    color: #717982;
-    font-size: 0.875rem;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
 
 @media only screen and (min-width: 768px) {
+
     h1 {
         font-size: 3.5rem;
+        margin: 4em 0 1em;
+    }
+
+    nav ul {
+        padding: 0;
+        line-height: 0;
+        margin-top: 2em;
     }
 }
 
 @media only screen and (min-width: 1024px) {
+
     h1 {
-        font-size: 4.23rem;
-        margin-top: 0em;
-        margin-bottom: 0em;
+        font-size: 5.14rem;
+        line-height: 6.46rem;
+        margin: 4em 0 0em;
     }
 
     nav a {
-        font-size: .7rem;
-        margin: .5rem;
+        font-size: 1rem;
+        margin: .7rem;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+        text-underline-offset: 30%;
+    }
+
+    h2 {
+        font-size: 2.28rem;
+        padding: 4rem 3rem 2rem;
+        border-bottom: #717982 .05em solid;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: 1.52rem;
+        line-height: 1.91rem;
+        margin: 1em 0 0;
+      }
+
+      img {
+        width: 7.20rem;
+    }
+
+    p {
+        font-weight: 400;
     }
 }
 
@@ -262,7 +288,7 @@ nav a:hover {
 @media only screen and (min-width: 1024px) {
    
     .wrapper {
-        width: 75%;
+        width: 70%;
         margin: 0 auto;
     }
     
@@ -347,14 +373,19 @@ nav a:hover {
 
 #home p:last-child {
     display: inline-block;
-    font-size: 1.12rem;
+    font-size: 1.28rem;
+    font-weight: 400;
+    line-height: 1.61rem;
     margin-bottom: 0;
     padding-bottom: 5em;
     position: relative;
 }
 
 #home p:first-of-type {
-    font-size: 1.5rem;
+    font-size: 1.71rem;
+    font-weight: 300;
+    line-height: 2.15rem;
+    margin: 0;
 }
 
 #home span {
@@ -368,45 +399,44 @@ nav a:hover {
 #home p:last-child:before,
 #home p:last-child:after {
     content: '';
-    width: 1.25rem;
-    height: .1em;
+    width: 1.9rem;
+    height: .15em;
     display: block;
     position: absolute;
     top: .5rem;
 }
 
 #home p:last-child:before {
-    left: -2rem;
+    left: -3.5rem;
 }
 
 #home p:last-child:after {
-    right: -2rem;
+    right: -3.5rem;
 }
 
 #home > div:first-child {
     background-color: #10443F;
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 
 #home img {
-    width: 6.25rem;
+    width: 7.14rem;
+    padding: 0;
+    margin: 0;
 }
 
 #home {
     background-color: #104F41;
 }
 
-#home .col-sm-4, 
-#home nav {
+#home .col-sm-4 {
     margin: 0 auto;
     padding: 1em 0 1em;
 }
 
 @media only screen and (min-width: 768px) {
-    #home img {
-        width: 7.20rem;
-    }
 
     #home .col-sm-4 {
         text-align: left;
@@ -416,13 +446,28 @@ nav a:hover {
         text-align: right;
     }
 
-    #home h1 {
-        margin: 4em 0 1em;
-      }
 }
 
 @media only screen and (min-width: 1024px) {
     
+    #home p:first-of-type {
+        font-size: 3.43rem;
+        line-height: 3rem;
+        font-weight: 300;
+        margin: 0em;
+    }
+
+    #home p:last-child {
+        font-size: 1.43rem;
+        line-height: 1.79rem;
+        margin: 1.5em 0em 0em;
+        padding-bottom: 6em;
+        letter-spacing: .05rem;
+    }
+
+    #home img {
+        width: 9.21rem;
+    }
 
 }
 
@@ -432,11 +477,54 @@ nav a:hover {
     background-color: #F4F7F9;
 }
 
+#features .col-lg-4:last-child {
+    padding-bottom: 4em;
+}
+
+@media only screen and (min-width: 768px) {
+
+    #features {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+    #features .col-lg-4 { 
+        width: 33.33%;
+        margin: 0;
+        padding-bottom: 4em;
+    }
+
+    #features {
+        text-align: left;
+    }
+
+}
+
 /* --- WORK --- */
 
 #work p {
-    font-size: 1rem;
+    font-size: 1.14rem;
+    line-height: 2rem;
     font-weight: 700;
+    margin-top: 0;
+    padding-bottom: 3em;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    #work h2 {
+        padding-top: 2em;
+    }
+
+    #work p {
+        font-size: 1.28rem;
+        line-height: 2.25rem;
+        padding-bottom: 6em;
+    }
+
 }
 
 /* --- FOOTER --- */
@@ -445,26 +533,51 @@ nav a:hover {
     text-decoration: none;
     font-style: normal;
     margin-right: .5rem;
-}
-
-#contact a:hover {
-    text-decoration: underline;
+    font-weight: 600;
 }
 
 #contact {
     background-color: #1EA78D;
     border-top: #10443F .3em solid;
-    font-size: 1.14rem;
-}
-
-#contact img {
-    width: 8.06rem;
-    padding: 2rem 0 1rem;
 }
 
 #contact span {
     vertical-align: .1em;
     font-size: 2rem;
+}
+
+#contact img {
+    width: 9.2rem;
+    margin-top: 4em;
+}
+
+address {
+    padding-bottom: 3em;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    #contact img { 
+        padding-top: 5em;
+        width: 9.21rem;
+    }
+
+    #contact a:hover {
+        text-decoration: underline;
+        text-underline-offset: 30%;
+    }
+
+    #contact a {
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1rem;
+    }
+
+    address {
+        padding-top: 0;
+        margin-top: 0;
+    }
+
 }
 
 /*--------------------------------------------------------------
